@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="shortcut icon" type="image/ico" href="{{ url_for('static', filename='favicon.ico') }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+        <title>Marker Detector</title>
+    </head>
+
+    <body>
+        <h1>Try detect 4 markers</h1>
+
+        </br></br>
+        
+        <div class="inputdiv">
+            Choose File
+            <input type="file" id="file-input" class="hide_file">
+        </div>
+
+        </br></br>
+
+        <h5>Preview of your image to send :</h5>
+        <img style="width:120px" id="uplImg" src="{{ url_for('static', filename='default.png') }}" alt="your image" />
+
+        </br></br>
+
+        <h5>Current State :</h5>
+        <h3 id="result">Please load an image</h3>
+
+        </br></br></br>
+
+        <button onclick="callWebService()">Send Request</button>
+
+        </br></br></br>
+
+    </body>
+    
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</html>
